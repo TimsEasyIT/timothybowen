@@ -444,6 +444,18 @@ code {
   background: rgba(255, 255, 255, 0.055);
 }
 
+.cert-badge{
+
+    width:120px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 20px auto;
+
+}
+
 .credential-card p:last-child {
   margin-bottom: 0;
   color: var(--text-light);
