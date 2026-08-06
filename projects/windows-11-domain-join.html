@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deployed a Windows 11 Pro virtual machine, installed VirtIO drivers, configured DNS, joined it to corp.home.arpa, and verified domain authentication with a test user account.">
+  <title>Windows 11 Domain Join | Timothy Bowen</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="site-logo" href="../index.html">Timothy Bowen</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span>
+      </button>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#resume">Résumé</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+
+    <section class="project-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> /
+          <a href="../index.html#projects">Projects</a> /
+          <span>Windows 11 Domain Join</span>
+        </nav>
+        <p class="section-label">Endpoint Administration</p>
+        <h1>Windows 11 Domain Join</h1>
+        <p class="project-intro">Deployed a Windows 11 Pro virtual machine, installed VirtIO drivers, configured DNS, joined it to corp.home.arpa, and verified domain authentication with a test user account.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container project-layout">
+        <article class="project-content">
+<section><h2>Overview</h2><p>CLIENT01 was created as a Windows 11 Pro virtual machine in Proxmox and used to validate the Active Directory environment from an end-user workstation.</p></section>
+<section><h2>System Information</h2><ul>
+<li><strong>Computer:</strong> CLIENT01</li>
+<li><strong>Operating System:</strong> Windows 11 Pro</li>
+<li><strong>Hypervisor:</strong> Proxmox VE</li>
+<li><strong>Domain:</strong> corp.home.arpa</li>
+<li><strong>Domain Controller:</strong> DC01</li>
+</ul></section>
+<section><h2>Implementation</h2><ol>
+<li>Created the CLIENT01 virtual machine.</li>
+<li>Installed Windows 11 Pro and VirtIO drivers.</li>
+<li>Configured the client to use DC01 for DNS.</li>
+<li>Joined CLIENT01 to corp.home.arpa.</li>
+<li>Verified successful sign-in using the CORP\tbowen account.</li>
+</ol></section>
+<section><h2>Challenge and Resolution</h2><p>The workstation initially could not locate the domain controller because DNS was configured incorrectly. I corrected the client DNS settings to use DC01, repeated the domain join, and verified successful authentication.</p></section>
+<section><h2>Lesson Learned</h2><p>Active Directory depends heavily on DNS. Domain clients must locate domain services through the domain controller's DNS server before they can join and authenticate reliably.</p></section>
+<section><h2>Suggested Screenshots</h2><div class="image-placeholder">Add screenshots of CLIENT01 in Proxmox, Windows system properties showing domain membership, and a successful domain sign-in.</div></section>
+
+        </article>
+        <aside class="project-sidebar">
+          <h2>Project Details</h2>
+          <dl>
+            <dt>Status</dt><dd>Completed</dd>
+            <dt>Environment</dt><dd>Enterprise-style home lab</dd>
+            <dt>Technologies</dt><dd>Windows 11 Pro, Active Directory, DNS, Proxmox VE, VirtIO</dd>
+            <dt>Skills Demonstrated</dt><dd>Endpoint deployment, Domain joining, DNS troubleshooting, Authentication testing, Virtualization</dd>
+            <dt>Documentation</dt><dd>Project notes, troubleshooting details, and a change log were maintained throughout deployment.</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> Timothy Bowen</p>
+      <p><a href="../index.html#projects">Return to projects</a></p>
+    </div>
+  </footer>
+</body>
+</html>

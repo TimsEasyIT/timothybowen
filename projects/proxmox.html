@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deployed Proxmox VE on dedicated hardware to create a flexible virtualization platform for Windows Server, Active Directory, networking, Linux, and future container projects.">
+  <title>Proxmox VE Deployment | Timothy Bowen</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="site-logo" href="../index.html">Timothy Bowen</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span>
+      </button>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#resume">Résumé</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+
+    <section class="project-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> /
+          <a href="../index.html#projects">Projects</a> /
+          <span>Proxmox VE Deployment</span>
+        </nav>
+        <p class="section-label">Virtualization</p>
+        <h1>Proxmox VE Deployment</h1>
+        <p class="project-intro">Deployed Proxmox VE on dedicated hardware to create a flexible virtualization platform for Windows Server, Active Directory, networking, Linux, and future container projects.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container project-layout">
+        <article class="project-content">
+<section><h2>Overview</h2><p>The lab runs on a dedicated Proxmox host named <strong>PVE01</strong>. The goal was to create a repeatable platform for building and testing enterprise IT services without affecting production equipment.</p></section>
+<section><h2>Hardware</h2><ul>
+<li><strong>CPU:</strong> Intel Core i3-4170, 2 cores / 4 threads</li>
+<li><strong>Memory:</strong> 16 GB DDR3-1600</li>
+<li><strong>Storage:</strong> 1 TB SATA SSD</li>
+<li><strong>Hypervisor:</strong> Proxmox VE 9.2.2</li>
+</ul></section>
+<section><h2>Implementation</h2><ol>
+<li>Installed Proxmox VE and configured management networking.</li>
+<li>Uploaded Windows Server and VirtIO driver ISO files.</li>
+<li>Created the first virtual machine, DC01.</li>
+<li>Allocated compute, memory, storage, and virtual-network resources.</li>
+<li>Used snapshots before major configuration changes.</li>
+</ol></section>
+<section><h2>Results</h2><ul>
+<li>Created a stable base for Windows Server and Windows 11 lab systems.</li>
+<li>Established repeatable VM deployment and recovery practices.</li>
+<li>Built a platform that can expand into Linux, Docker, monitoring, and security projects.</li>
+</ul></section>
+<section><h2>Lessons Learned</h2><p>This project strengthened my understanding of virtualization, VM provisioning, storage allocation, virtual networking, and the value of snapshots before major system changes.</p></section>
+<section><h2>Suggested Screenshots</h2><div class="image-placeholder">Add screenshots of the Proxmox dashboard, PVE01 hardware summary, DC01 VM configuration, and virtual-network settings.</div></section>
+
+        </article>
+        <aside class="project-sidebar">
+          <h2>Project Details</h2>
+          <dl>
+            <dt>Status</dt><dd>Completed</dd>
+            <dt>Environment</dt><dd>Enterprise-style home lab</dd>
+            <dt>Technologies</dt><dd>Proxmox VE 9.2.2, Windows Server, VirtIO, Virtual Networking, Snapshots</dd>
+            <dt>Skills Demonstrated</dt><dd>Hypervisor deployment, VM provisioning, Storage allocation, Network configuration, Change management</dd>
+            <dt>Documentation</dt><dd>Project notes, troubleshooting details, and a change log were maintained throughout deployment.</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> Timothy Bowen</p>
+      <p><a href="../index.html#projects">Return to projects</a></p>
+    </div>
+  </footer>
+</body>
+</html>

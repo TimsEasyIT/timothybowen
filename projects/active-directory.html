@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Installed Windows Server 2025, deployed Active Directory Domain Services and DNS, created the corp.home.arpa forest, and designed an organizational structure for users, computers, groups, and service accounts.">
+  <title>Windows Server and Active Directory | Timothy Bowen</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="site-logo" href="../index.html">Timothy Bowen</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span>
+      </button>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#resume">Résumé</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+
+    <section class="project-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> /
+          <a href="../index.html#projects">Projects</a> /
+          <span>Windows Server and Active Directory</span>
+        </nav>
+        <p class="section-label">Windows Infrastructure</p>
+        <h1>Windows Server and Active Directory</h1>
+        <p class="project-intro">Installed Windows Server 2025, deployed Active Directory Domain Services and DNS, created the corp.home.arpa forest, and designed an organizational structure for users, computers, groups, and service accounts.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container project-layout">
+        <article class="project-content">
+<section><h2>Overview</h2><p>DC01 was configured as the first domain controller for <strong>corp.home.arpa</strong>, providing Active Directory Domain Services and DNS for the lab.</p></section>
+<section><h2>Server Configuration</h2><ul>
+<li><strong>Server:</strong> DC01</li>
+<li><strong>Operating System:</strong> Windows Server 2025 Standard Evaluation</li>
+<li><strong>Domain:</strong> corp.home.arpa</li>
+<li><strong>Roles:</strong> Active Directory Domain Services and DNS</li>
+</ul></section>
+<section><h2>Directory Design</h2><p>The directory was organized under a custom <strong>Company</strong> OU with separate areas for users, computers, groups, servers, workstations, departments, and service accounts.</p>
+<ul>
+<li>Department OUs for IT, HR, Finance, and Sales</li>
+<li>Computer OUs for workstations and servers</li>
+<li>Security groups including GG_IT_Admins, GG_HelpDesk, GG_HR, GG_Finance, and GG_Sales</li>
+<li>Test user accounts for administration and policy validation</li>
+</ul></section>
+<section><h2>Challenge and Resolution</h2><p>I initially attempted to move Organizational Units beneath the built-in Users container. The move failed because the built-in Users object is a container rather than an OU. I resolved the issue by creating a custom Company OU hierarchy.</p></section>
+<section><h2>Results</h2><ul>
+<li>Created a functioning Windows domain and DNS foundation.</li>
+<li>Established a scalable OU and security-group structure.</li>
+<li>Prepared the environment for domain joins, Group Policy, file services, and software deployment.</li>
+</ul></section>
+<section><h2>Suggested Screenshots</h2><div class="image-placeholder">Add screenshots of Server Manager, Active Directory Users and Computers, the OU hierarchy, security groups, and DNS Manager.</div></section>
+
+        </article>
+        <aside class="project-sidebar">
+          <h2>Project Details</h2>
+          <dl>
+            <dt>Status</dt><dd>Completed</dd>
+            <dt>Environment</dt><dd>Enterprise-style home lab</dd>
+            <dt>Technologies</dt><dd>Windows Server 2025, Active Directory, DNS, Organizational Units, Security Groups</dd>
+            <dt>Skills Demonstrated</dt><dd>Server administration, Directory design, Identity management, DNS configuration, Troubleshooting</dd>
+            <dt>Documentation</dt><dd>Project notes, troubleshooting details, and a change log were maintained throughout deployment.</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> Timothy Bowen</p>
+      <p><a href="../index.html#projects">Return to projects</a></p>
+    </div>
+  </footer>
+</body>
+</html>

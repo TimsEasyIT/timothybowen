@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Created and linked Group Policy Objects for desktop customization, drive mapping, password and lockout settings, endpoint restrictions, logon messaging, software deployment, and folder redirection.">
+  <title>Group Policy Management | Timothy Bowen</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="site-logo" href="../index.html">Timothy Bowen</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span>
+      </button>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#resume">Résumé</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+
+    <section class="project-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> /
+          <a href="../index.html#projects">Projects</a> /
+          <span>Group Policy Management</span>
+        </nav>
+        <p class="section-label">Windows Administration</p>
+        <h1>Group Policy Management</h1>
+        <p class="project-intro">Created and linked Group Policy Objects for desktop customization, drive mapping, password and lockout settings, endpoint restrictions, logon messaging, software deployment, and folder redirection.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container project-layout">
+        <article class="project-content">
+<section><h2>Overview</h2><p>This project expanded the lab from basic identity services into centralized user and computer configuration management. Policies were validated with <code>gpupdate</code>, <code>gpresult</code>, and Event Viewer.</p></section>
+<section><h2>Policies Implemented</h2><ul>
+<li>Corporate desktop wallpaper using a UNC path</li>
+<li>Department drive mappings using Item-Level Targeting</li>
+<li>Password complexity, history, length, and age settings</li>
+<li>Account lockout settings</li>
+<li>Control Panel and USB storage restrictions</li>
+<li>Interactive logon banner</li>
+<li>7-Zip and Google Chrome MSI deployment</li>
+<li>Documents folder redirection to centralized storage</li>
+</ul></section>
+<section><h2>Drive Mapping</h2><ul>
+<li><strong>Z:</strong> Company</li>
+<li><strong>I:</strong> IT</li>
+<li><strong>H:</strong> HR</li>
+<li><strong>S:</strong> Sales</li>
+</ul>
+<p>Item-Level Targeting assigned departmental drives based on Active Directory security-group membership.</p></section>
+<section><h2>Troubleshooting</h2><ul>
+<li>Corrected wallpaper deployment caused by an incorrect UNC path and filename.</li>
+<li>Used <code>gpresult</code> to diagnose missing mapped drives and discovered the GPO was not linked.</li>
+<li>Diagnosed folder-redirection failures with <code>gpresult</code> and Event Viewer.</li>
+<li>Corrected missing NTFS permissions by adding Authenticated Users to the root UserData folder.</li>
+</ul></section>
+<section><h2>Results</h2><ul>
+<li>Centralized user and computer configuration through Active Directory.</li>
+<li>Automatically assigned resources according to department membership.</li>
+<li>Deployed software and redirected user data without manually configuring each workstation.</li>
+</ul></section>
+<section><h2>Lessons Learned</h2><p>A GPO must be linked to the correct scope before it can apply. I also learned that gpresult, Event Viewer, share permissions, and NTFS permissions are essential when troubleshooting policy deployments.</p></section>
+<section><h2>Suggested Screenshots</h2><div class="image-placeholder">Add screenshots of Group Policy Management, mapped-drive preferences, Item-Level Targeting, software installation policies, and gpresult output.</div></section>
+
+        </article>
+        <aside class="project-sidebar">
+          <h2>Project Details</h2>
+          <dl>
+            <dt>Status</dt><dd>Completed</dd>
+            <dt>Environment</dt><dd>Enterprise-style home lab</dd>
+            <dt>Technologies</dt><dd>Group Policy, Active Directory, SMB, NTFS, MSI Deployment, gpresult</dd>
+            <dt>Skills Demonstrated</dt><dd>Policy design, Group Policy Preferences, Item-Level Targeting, Software distribution, Enterprise troubleshooting</dd>
+            <dt>Documentation</dt><dd>Project notes, troubleshooting details, and a change log were maintained throughout deployment.</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> Timothy Bowen</p>
+      <p><a href="../index.html#projects">Return to projects</a></p>
+    </div>
+  </footer>
+</body>
+</html>
