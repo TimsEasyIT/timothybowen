@@ -57,7 +57,7 @@
 <li>Security groups including GG_IT_Admins, GG_HelpDesk, GG_HR, GG_Finance, and GG_Sales</li>
 <li>Test user accounts for administration and policy validation</li>
 </ul></section>
-<section><h2>Challenge and Resolution</h2><p>I initially attempted to move Organizational Units beneath the built-in Users container. The move failed because the built-in Users object is a container rather than an OU. I resolved the issue by creating a custom Company OU hierarchy.</p></section>
+<section><h2>Challenge and Resolution</h2><p>After changing the lab from the 192.168.1.x network to 192.168.0.x, clients were unable to communicate with the domain controller. Updated static IP addressing, gateway, and DNS configuration on the server and clients, then verified connectivity and Active Directory functionality.</p></section>
 <section><h2>Results</h2><ul>
 <li>Created a functioning Windows domain and DNS foundation.</li>
 <li>Established a scalable OU and security-group structure.</li>
