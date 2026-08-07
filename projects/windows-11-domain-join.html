@@ -60,7 +60,24 @@
 </ol></section>
 <section><h2>Challenge and Resolution</h2><p>The workstation initially could not locate the domain controller because DNS was configured incorrectly. I corrected the client DNS settings to use DC01, repeated the domain join, and verified successful authentication.</p></section>
 <section><h2>Lesson Learned</h2><p>Active Directory depends heavily on DNS. Domain clients must locate domain services through the domain controller's DNS server before they can join and authenticate reliably.</p></section>
-<section><h2>Suggested Screenshots</h2><div class="image-placeholder">Add screenshots of CLIENT01 in Proxmox, Windows system properties showing domain membership, and a successful domain sign-in.</div></section>
+<section>
+
+              <h2>Screenshot</h2>
+          
+              <figure class="project-figure">
+          
+                  <img
+                      src="../assets/images/Domain.png"
+                      alt="Active Directory lab architecture"
+                      class="project-image">
+          
+                  <figcaption>
+                     A gpresult of Client01 domain joined Windows PC.
+                  </figcaption>
+          
+              </figure>
+          
+          </section>
 
         </article>
         <aside class="project-sidebar">
