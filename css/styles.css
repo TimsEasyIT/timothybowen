@@ -660,12 +660,88 @@ code {
   text-align: center;
 }
 
+
+
+/* Home lab spotlight */
+
+.lab-spotlight-section {
+  padding-top: 1rem;
+  padding-bottom: 5.5rem;
+}
+
+.lab-spotlight {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 3.5rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.lab-spotlight-image-wrap {
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.lab-spotlight-image {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.lab-spotlight-content h2 {
+  margin-bottom: 1rem;
+}
+
+.lab-spotlight-content > p:not(.section-label) {
+  color: var(--text-muted);
+  font-size: 1.04rem;
+}
+
+.lab-inventory {
+  display: grid;
+  gap: 0.55rem;
+  padding-left: 1.15rem;
+  margin: 1.3rem 0 1.5rem;
+  color: var(--text-muted);
+}
+
+/* Project figures */
+
+.project-figure {
+  margin: 1.5rem 0 0;
+}
+
+.project-image {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(25, 45, 75, 0.08);
+}
+
+.project-figure-portrait .project-image {
+  width: min(100%, 720px);
+  margin-inline: auto;
+}
+
+.project-figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 /* Responsive */
 
 @media (max-width: 980px) {
   .hero-grid,
   .two-column,
-  .project-layout {
+  .project-layout,
+  .lab-spotlight {
     grid-template-columns: 1fr;
   }
 
