@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Physical rack infrastructure home lab project by Timothy Bowen, including documented networking, compute, power, virtualization, and device naming.">
+  <title>Physical Rack Infrastructure | Timothy Bowen</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="site-logo" href="../index.html">Timothy Bowen</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span>
+      </button>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#resume">Résumé</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="project-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> /
+          <a href="../index.html#projects">Projects</a> /
+          <span>Physical Rack Infrastructure</span>
+        </nav>
+        <p class="section-label">Infrastructure</p>
+        <h1>Physical Rack Infrastructure</h1>
+        <p class="project-intro">Migrated the enterprise-style home lab into a full-size enclosed rack to centralize networking, compute, power distribution, documentation, and future expansion.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-layout">
+        <article class="project-content">
+          <section>
+            <h2>Overview</h2>
+            <p>The goal of this project was to make the physical side of the home lab more organized and closer to the way infrastructure is documented in a professional environment. Networking, virtualization, Linux, client hardware, and rack power were consolidated into one cabinet, and physical devices were assigned consistent host and device names.</p>
+          </section>
+
+          <section>
+            <h2>Rack Environment</h2>
+            <figure class="project-figure project-figure-portrait">
+              <img src="../assets/images/homelab-rack.jpg" alt="Full-size home lab rack with labeled UniFi gateway and switch, Proxmox host, Linux system, and physical client workstation" class="project-image">
+              <figcaption>Current rack layout with labels for key networking, virtualization, Linux, and client devices.</figcaption>
+            </figure>
+          </section>
+
+          <section>
+            <h2>Device Naming and Inventory</h2>
+            <ul>
+              <li><strong>GW01</strong> — UniFi Cloud Gateway Max</li>
+              <li><strong>SW01</strong> — UniFi managed switch</li>
+              <li><strong>PVE01</strong> — Proxmox VE virtualization host</li>
+              <li><strong>LINUX01</strong> — Linux system used for lab administration and testing</li>
+              <li><strong>CLIENT02</strong> — Physical client/workstation</li>
+              <li><strong>DC01</strong> — Windows Server domain controller VM hosted on PVE01</li>
+              <li><strong>CLIENT01</strong> — Windows 11 domain client VM hosted on PVE01</li>
+            </ul>
+            <p>Physical devices are labeled on the rack, while virtual machine names are documented logically under the Proxmox host. This keeps the physical and virtual layers distinct while making troubleshooting and documentation easier.</p>
+          </section>
+
+          <section>
+            <h2>Implementation</h2>
+            <ol>
+              <li>Installed and positioned the enclosed server/network rack in the home lab.</li>
+              <li>Migrated networking, compute, Linux, and client equipment into the cabinet.</li>
+              <li>Organized vertical rack power distribution and device power connections.</li>
+              <li>Assigned consistent device names and added physical labels to key equipment.</li>
+              <li>Improved cable routing and kept the layout accessible for maintenance and future changes.</li>
+              <li>Documented the relationship between the physical Proxmox host and the virtual machines running on it.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h2>Why This Matters</h2>
+            <p>The rack adds a physical-infrastructure layer to the lab. In addition to configuring software and virtual systems, I can practice equipment organization, rack access, cable tracing, device identification, physical troubleshooting, power awareness, and repeatable documentation.</p>
+          </section>
+
+          <section>
+            <h2>Next Steps</h2>
+            <ul>
+              <li>Continue improving cable management and labeling on both ends of critical connections.</li>
+              <li>Document switch-port assignments and device-to-port relationships.</li>
+              <li>Add additional rack-mounted compute or storage hardware as the lab expands.</li>
+              <li>Continue integrating the rack with Proxmox, Windows Server, UniFi, and automation projects.</li>
+            </ul>
+          </section>
+        </article>
+
+        <aside class="project-sidebar">
+          <h2>Project Details</h2>
+          <dl>
+            <dt>Status</dt><dd>Operational / Ongoing</dd>
+            <dt>Environment</dt><dd>Rack-based enterprise-style home lab</dd>
+            <dt>Technologies</dt><dd>UniFi networking, Proxmox VE, Windows Server, Linux, Windows 11, rack power distribution, copper Ethernet</dd>
+            <dt>Skills Demonstrated</dt><dd>Rack organization, device naming, infrastructure documentation, cabling, power awareness, physical troubleshooting, virtualization mapping</dd>
+            <dt>Related Projects</dt><dd><a href="proxmox.html">Proxmox VE</a><br><a href="unifi-network.html">UniFi Network</a><br><a href="active-directory.html">Active Directory</a></dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> Timothy Bowen</p>
+      <p><a href="../index.html#projects">Return to projects</a></p>
+    </div>
+  </footer>
+</body>
+</html>

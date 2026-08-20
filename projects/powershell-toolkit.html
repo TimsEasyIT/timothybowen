@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PowerShell IT Troubleshooting Toolkit project by Timothy Bowen for network, DNS, connectivity, and adapter diagnostics.">
+  <title>PowerShell IT Troubleshooting Toolkit | Timothy Bowen</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="site-logo" href="../index.html">Timothy Bowen</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span>
+      </button>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#certifications">Certifications</a>
+        <a href="../index.html#resume">Résumé</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="project-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> /
+          <a href="../index.html#projects">Projects</a> /
+          <span>PowerShell IT Troubleshooting Toolkit</span>
+        </nav>
+        <p class="section-label">Automation</p>
+        <h1>PowerShell IT Troubleshooting Toolkit</h1>
+        <p class="project-intro">Built a reusable PowerShell script to standardize common network troubleshooting checks and reduce repetitive manual diagnostic work.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-layout">
+        <article class="project-content">
+          <section>
+            <h2>Overview</h2>
+            <p>This project was created to strengthen PowerShell scripting skills while solving a practical IT-support problem: gathering the same network and connectivity information repeatedly during troubleshooting. The toolkit combines common checks into one script so that results can be reviewed quickly and consistently.</p>
+          </section>
+
+          <section>
+            <h2>Current Capabilities</h2>
+            <ul>
+              <li>Displays computer and active network-interface information.</li>
+              <li>Reports IPv4 addressing, default gateway, and configured DNS servers.</li>
+              <li>Lists network adapters and their connection status.</li>
+              <li>Tests general IP connectivity.</li>
+              <li>Tests DNS resolution using PowerShell and standard Windows tools.</li>
+              <li>Provides structured console output to make troubleshooting results easier to review.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Troubleshooting Example</h2>
+            <p>During development, the toolkit initially reported DNS problems. I verified the configured resolver, tested name resolution, corrected the network/DNS configuration, and reran the script to confirm successful resolution. This provided a practical example of using automation both to detect an issue and validate the fix.</p>
+          </section>
+
+          <section>
+            <h2>Skills Demonstrated</h2>
+            <ul>
+              <li>PowerShell scripting and reusable functions</li>
+              <li>TCP/IP and Windows network diagnostics</li>
+              <li>DNS troubleshooting</li>
+              <li>Command-line administration</li>
+              <li>Structured troubleshooting workflows</li>
+              <li>Documentation and iterative testing</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Planned Improvements</h2>
+            <ul>
+              <li>Add service-health checks and common Windows support diagnostics.</li>
+              <li>Add optional export of results for ticket documentation.</li>
+              <li>Expand hardware and system-information collection.</li>
+              <li>Continue modularizing the script so individual checks can be reused in future automation projects.</li>
+            </ul>
+          </section>
+        </article>
+
+        <aside class="project-sidebar">
+          <h2>Project Details</h2>
+          <dl>
+            <dt>Status</dt><dd>Ongoing</dd>
+            <dt>Environment</dt><dd>Windows 11 / Home Lab</dd>
+            <dt>Technologies</dt><dd>PowerShell, Resolve-DnsName, nslookup, TCP/IP, Windows networking</dd>
+            <dt>Skills Demonstrated</dt><dd>Scripting, automation, DNS troubleshooting, network diagnostics, repeatable support workflows</dd>
+            <dt>Repository</dt><dd><a href="https://github.com/timseasyit" target="_blank" rel="noopener">View GitHub</a></dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="current-year"></span> Timothy Bowen</p>
+      <p><a href="../index.html#projects">Return to projects</a></p>
+    </div>
+  </footer>
+</body>
+</html>
