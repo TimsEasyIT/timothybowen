@@ -1,359 +1,289 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Timothy Bowen's IT portfolio featuring systems administration, networking, Microsoft technologies, and technical projects.">
-  <title>Timothy Bowen | IT Portfolio</title>
-
-  
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Timothy Bowen's IT portfolio featuring systems administration, networking, Microsoft technologies, and technical projects." name="description"/>
+<title>Timothy Bowen | IT Portfolio</title>
+<link href="css/styles.css" rel="stylesheet"/>
+<script defer="" src="js/main.js"></script>
 </head>
-
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <header class="site-header">
-    <div class="container nav-container">
-      <a class="site-logo" href="#top" aria-label="Timothy Bowen home">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+<div class="container nav-container">
+<a aria-label="Timothy Bowen home" class="site-logo" href="#top">
         Timothy Bowen
       </a>
+<button aria-controls="primary-navigation" aria-expanded="false" class="nav-toggle" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span aria-hidden="true">☰</span>
+</button>
+<nav aria-label="Primary navigation" class="primary-nav" id="primary-navigation">
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#certifications">Certifications</a>
+<a href="#resume">Résumé</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<main id="main-content">
+<section class="hero" id="top">
+<div class="container hero-grid">
+<div class="hero-content">
+<p class="eyebrow">IT Support Specialist • IT Administration • Networking</p>
+<h1>Systems. Networks. Solutions.</h1>
+<p class="hero-summary">IT professional with hands-on experience supporting users and building Windows Server, Active Directory, virtualization, networking, and physical homelab infrastructure.</p>
+<div class="button-group">
+<a class="button button-primary" href="#projects">View Projects</a>
+<a class="button button-secondary" href="#resume">View Résumé</a>
+</div>
+<ul aria-label="Professional highlights" class="quick-facts">
+<li>CompTIA IT Operations Specialist</li>
+<li>CompTIA Network+</li>
+<li>CompTIA A+</li>
+<li>Windows Server &amp; Active Directory</li>
+</ul>
+</div>
+<aside class="hero-sidebar">
+<div class="profile-card">
+<img alt="Timothy Bowen" class="profile-photo" src="assets/images/timothy-bowen.jpeg"/>
+</div>
+<div class="hero-panel">
+<p class="panel-label">Current Lab Focus</p>
+<h2>Rack-Based Enterprise Home Lab</h2>
+<ul><li>Physical rack infrastructure</li><li>Proxmox virtualization</li><li>Windows Server &amp; Active Directory</li><li>UniFi network segmentation</li><li>PowerShell troubleshooting automation</li></ul>
+</div>
+</aside>
+</div>
+</section>
+<section class="section" id="about">
+<div class="container two-column">
+<div>
+<p class="section-label">About</p>
+<h2>Technical experience, customer service, and leadership.</h2>
+</div>
+<div class="prose">
+<p>CompTIA IT Operations Specialist (CIOS) certified IT professional with over nine years of experience serving as the primary technology administrator for a K–12 organization supporting approximately 210 users. Experienced in Windows administration, Microsoft 365, network infrastructure, wireless networking, VoIP, endpoint support, and audiovisual systems, with a proven ability to lead technology projects, troubleshoot complex issues, and deliver excellent end-user support. I continue expanding my infrastructure skills through industry certifications and a rack-based enterprise home lab built around Proxmox, Windows Server, UniFi networking, and PowerShell automation.</p>
 
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="primary-navigation"
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span aria-hidden="true">☰</span>
-      </button>
+</div>
+</div>
+</section><section class="section lab-spotlight-section" id="homelab">
+<div class="container lab-spotlight">
+<div class="lab-spotlight-image-wrap">
+<img alt="Rack-based enterprise home lab with labeled gateway, managed switch, Proxmox host, Linux system, and client workstation" class="lab-spotlight-image" src="assets/images/homelab-rack.jpg"/>
+</div>
+<div class="lab-spotlight-content">
+<p class="section-label">Home Lab Infrastructure</p>
+<h2>Building the physical layer behind the lab.</h2>
+<p>I recently migrated my lab equipment into a full-size enclosed rack and introduced a consistent device-naming scheme to make the environment easier to document, troubleshoot, and expand.</p>
+<ul class="lab-inventory">
+<li><strong>GW01</strong> — UniFi Cloud Gateway Max</li>
+<li><strong>SW01</strong> — UniFi managed switch</li>
+<li><strong>PVE01</strong> — Proxmox VE hypervisor</li>
+<li><strong>LINUX01</strong> — Linux system</li>
+<li><strong>CLIENT02</strong> — Physical workstation</li>
+</ul>
+<a class="text-link" href="projects/rack-infrastructure.html">View rack infrastructure project <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+<section class="section section-muted" id="projects">
+<div class="container">
+<div class="section-heading">
+<div>
+<p class="section-label">Featured Work</p>
+<h2>Projects</h2>
+</div>
+<p>Hands-on labs spanning virtualization, Windows infrastructure, networking, automation, and physical rack deployment.</p>
+</div>
+<div class="card-grid">
+<article class="project-card">
+<div aria-hidden="true" class="card-icon">PX</div>
+<p class="card-kicker">Virtualization</p>
+<h3>Proxmox VE Deployment</h3>
+<p>Deployed a dedicated virtualization platform for Windows Server, Active Directory, networking, and future lab services.</p>
+<ul class="tag-list"><li>Proxmox VE</li><li>VirtIO</li><li>Virtual Networking</li><li>Snapshots</li></ul>
+<a class="text-link" href="projects/proxmox.html">View project <span aria-hidden="true">→</span></a>
+</article>
+<article class="project-card">
+<div aria-hidden="true" class="card-icon">AD</div>
+<p class="card-kicker">Windows Infrastructure</p>
+<h3>Windows Server and Active Directory</h3>
+<p>Built the corp.home.arpa domain with AD DS, DNS, an enterprise-style OU hierarchy, security groups, and user accounts.</p>
+<ul class="tag-list"><li>Windows Server</li><li>Active Directory</li><li>DNS</li><li>Identity</li></ul>
+<a class="text-link" href="projects/active-directory.html">View project <span aria-hidden="true">→</span></a>
+</article>
+<article class="project-card">
+<div aria-hidden="true" class="card-icon">W11</div>
+<p class="card-kicker">Endpoint Administration</p>
+<h3>Windows 11 Domain Join</h3>
+<p>Deployed CLIENT01, corrected DNS configuration, joined it to the domain, and verified enterprise authentication.</p>
+<ul class="tag-list"><li>Windows 11</li><li>Domain Join</li><li>DNS</li><li>Authentication</li></ul>
+<a class="text-link" href="projects/windows-11-domain-join.html">View project <span aria-hidden="true">→</span></a>
+</article>
+<article class="project-card">
+<div aria-hidden="true" class="card-icon">GP</div>
+<p class="card-kicker">Windows Administration</p>
+<h3>Group Policy Management</h3>
+<p>Centralized settings, mapped drives, security restrictions, software deployment, and folder redirection through GPOs.</p>
+<ul class="tag-list"><li>Group Policy</li><li>Item-Level Targeting</li><li>MSI Deployment</li><li>gpresult</li></ul>
+<a class="text-link" href="projects/group-policy.html">View project <span aria-hidden="true">→</span></a>
+</article>
+<article class="project-card">
+<div aria-hidden="true" class="card-icon">FS</div>
+<p class="card-kicker">File and Storage</p>
+<h3>Enterprise Windows File Services</h3>
+<p>Implemented FSRM, quotas, Shadow Copies, Previous Versions, NTFS permissions, folder redirection, and ABE.</p>
+<ul class="tag-list"><li>FSRM</li><li>NTFS</li><li>Shadow Copies</li><li>ABE</li></ul>
+<a class="text-link" href="projects/file-services.html">View project <span aria-hidden="true">→</span></a>
+</article>
+<article class="project-card">
+<div aria-hidden="true" class="card-icon">NW</div>
+<p class="card-kicker">Networking</p>
+<h3>UniFi Business-Style Network</h3>
+<p>Built a segmented UniFi lab with managed switching, multiple network/SSID roles, firewall testing, guest networking, and centralized management.</p>
+<ul class="tag-list"><li>UniFi</li><li>VLANs</li><li>Wireless</li><li>Firewall Rules</li></ul>
+<a class="text-link" href="projects/unifi-network.html">View project <span aria-hidden="true">→</span></a>
+</article>
+<article class="project-card">
+<div aria-hidden="true" class="card-icon">PS</div>
+<p class="card-kicker">Automation</p>
+<h3>PowerShell IT Troubleshooting Toolkit</h3>
+<p>Built a reusable PowerShell troubleshooting script to collect network information, test DNS and connectivity, and inspect network adapters.</p>
+<ul class="tag-list"><li>PowerShell</li><li>DNS</li><li>TCP/IP</li><li>Automation</li></ul>
+<a class="text-link" href="projects/powershell-toolkit.html">View project <span aria-hidden="true">→</span></a>
+</article><article class="project-card">
+<div aria-hidden="true" class="card-icon">RK</div>
+<p class="card-kicker">Infrastructure</p>
+<h3>Physical Rack Infrastructure</h3>
+<p>Centralized the home lab in a full-size enclosed rack with documented device names, power distribution, compute, networking, and room for expansion.</p>
+<ul class="tag-list"><li>Rack &amp; Stack</li><li>Cabling</li><li>Power</li><li>Documentation</li></ul>
+<a class="text-link" href="projects/rack-infrastructure.html">View project <span aria-hidden="true">→</span></a>
+</article></div>
+</div>
+</section>
+<section class="section" id="skills">
+<div class="container">
+<div class="section-heading">
+<div>
+<p class="section-label">Capabilities</p>
+<h2>Technical Skills</h2>
+</div>
 
-      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#resume">Résumé</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+</div>
+<div class="skills-grid">
+<article class="skill-group">
+<h3>Systems Administration</h3>
+<ul>
+<li>Windows Server</li>
+<li>Active Directory Domain Services</li>
+<li>Group Policy Management</li>
+<li>DNS and DHCP fundamentals</li>
+<li>File Shares</li>
+</ul>
+</article>
+<article class="skill-group">
+<h3>Networking</h3>
+<ul><li>TCP/IP and subnetting</li><li>VLANs and network segmentation</li><li>Switching and routing fundamentals</li><li>UniFi administration</li><li>Cat5e/Cat6 cabling and physical network troubleshooting</li></ul>
+</article>
+<article class="skill-group">
+<h3>Support and Endpoint</h3>
+<ul>
+<li>Windows 10 and Windows 11</li>
+<li>Hardware and software troubleshooting</li>
+<li>VoIP Phones</li>
+<li>User account administration</li>
+<li>Printers, peripherals, and conferencing</li>
+</ul>
+</article>
+<article class="skill-group">
+<h3>Tools and Platforms</h3>
+<ul><li>Proxmox VE</li><li>Active Directory</li><li>PowerShell scripting and automation</li><li>Microsoft Entra ID — lab learning</li><li>GitHub and Cloudflare DNS</li></ul>
+</article>
+</div>
+</div>
+</section>
+<section class="section section-dark" id="certifications">
+<div class="container">
+<div class="section-heading">
+<div>
+<p class="section-label">Credentials</p>
+<h2>Certifications</h2>
+</div>
 
-  <main id="main-content">
-    <section id="top" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">IT Support Specialist • IT Administration • Networking</p>
+</div>
+<div class="credential-grid">
+<article class="credential-card">
+<p class="credential-status">In Progress</p>
+<h3>CompTIA Security+</h3>
 
-          <h1>Systems. Networks. Solutions.</h1>
+</article>
+<article class="credential-card">
+<img alt="CompTIA A+ Certification" class="cert-badge" src="assets/images/CIOS_Certified.png"/>
+<p class="credential-status">Earned</p>
+<h3>CompTIA IT Operations Specialist</h3>
+<p>Stackable certification earned through A+ and Network+</p>
+</article>
+<article class="credential-card">
+<img alt="CompTIA A+ Certification" class="cert-badge" src="assets/images/Network+-png.png"/>
+<p class="credential-status">Earned</p>
+<h3>CompTIA Network+</h3>
+<p>Networking concepts, operations, security, and troubleshooting</p>
+</article>
+<article class="credential-card">
+<img alt="CompTIA A+ Certification" class="cert-badge" src="assets/images/A+-png.png"/>
+<p class="credential-status">Earned</p>
+<h3>CompTIA A+</h3>
+<p>Core 1 and Core 2</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="resume">
+<div class="container resume-panel">
+<div>
+<p class="section-label">Résumé</p>
+<h2>Experience</h2>
 
-          <p class="hero-summary">
-            IT professional with hands-on experience supporting users and building Windows Server, Active Directory, hardware replacement, and network environments.
-          </p>
-
-          <div class="button-group">
-            <a class="button button-primary" href="#projects">View Projects</a>
-            <a class="button button-secondary" href="#resume">View Résumé</a>
-          </div>
-
-          <ul class="quick-facts" aria-label="Professional highlights">
-            <li>CompTIA IT Operations Specialist</li>
-            <li>CompTIA Network+</li>
-            <li>CompTIA A+</li>
-            <li>Windows Server & Active Directory</li>
-          </ul>
-        </div>
-
-       <aside>
-         <div class="profile-card">
-          <img
-            src="assets/images/timothy-bowen.jpeg"
-            alt="Timothy Bowen"
-            class="profile-photo">
-        </div>
-
-        <div class="hero-panel">
-
-          <p class="panel-label">Currently Building</p>
-
-          <h2>Enterprise-Style Home Lab</h2>
-
-          <ul>
-            <li>Microsoft Entra ID</li>
-            <li>UniFi VLAN Segmentation</li>
-            <li>Secure Guest Networking</li>
-            <li>Infrastructure Documentation</li>
-          </ul>
-         </div>
-      </aside>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container two-column">
-        <div>
-          <p class="section-label">About</p>
-          <h2>Technical experience, customer service, and leadership.</h2>
-        </div>
-
-        <div class="prose">
-          <p>
-            CompTIA IT Operations Specialist (CIOS) certified IT professional 
-            with over nine years of experience serving as the primary technology administrator 
-            for a K–12 organization supporting approximately 210 users. 
-            Experienced in Windows administration, Microsoft 365, network infrastructure, wireless networking, VoIP, 
-            endpoint support, and audiovisual systems, with a proven ability to lead technology projects, 
-            troubleshoot complex issues, and deliver excellent end-user support. 
-            Continuously expanding technical skills through industry certifications and a production-style home lab. 
-          </p>
-
-          <p>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section section-muted">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-label">Featured Work</p>
-            <h2>Projects</h2>
-          </div>
-
-          <p>
-          </p>
-        </div>
-
-          <div class="card-grid">
-            <article class="project-card">
-              <div class="card-icon" aria-hidden="true">PX</div>
-              <p class="card-kicker">Virtualization</p>
-              <h3>Proxmox VE Deployment</h3>
-              <p>Deployed a dedicated virtualization platform for Windows Server, Active Directory, networking, and future lab services.</p>
-              <ul class="tag-list"><li>Proxmox VE</li><li>VirtIO</li><li>Virtual Networking</li><li>Snapshots</li></ul>
-              <a class="text-link" href="projects/proxmox.html">View project <span aria-hidden="true">→</span></a>
-            </article>
-
-            <article class="project-card">
-              <div class="card-icon" aria-hidden="true">AD</div>
-               <p class="card-kicker">Windows Infrastructure</p>
-              <h3>Windows Server and Active Directory</h3>
-              <p>Built the corp.home.arpa domain with AD DS, DNS, an enterprise-style OU hierarchy, security groups, and user accounts.</p>
-              <ul class="tag-list"><li>Windows Server</li><li>Active Directory</li><li>DNS</li><li>Identity</li></ul>
-              <a class="text-link" href="projects/active-directory.html">View project <span aria-hidden="true">→</span></a>
-            </article>
-
-            <article class="project-card">
-              <div class="card-icon" aria-hidden="true">W11</div>
-              <p class="card-kicker">Endpoint Administration</p>
-              <h3>Windows 11 Domain Join</h3>
-              <p>Deployed CLIENT01, corrected DNS configuration, joined it to the domain, and verified enterprise authentication.</p>
-               <ul class="tag-list"><li>Windows 11</li><li>Domain Join</li><li>DNS</li><li>Authentication</li></ul>
-              <a class="text-link" href="projects/windows-11-domain-join.html">View project <span aria-hidden="true">→</span></a>
-            </article>
-
-            <article class="project-card">
-              <div class="card-icon" aria-hidden="true">GP</div>
-              <p class="card-kicker">Windows Administration</p>
-              <h3>Group Policy Management</h3>
-              <p>Centralized settings, mapped drives, security restrictions, software deployment, and folder redirection through GPOs.</p>
-              <ul class="tag-list"><li>Group Policy</li><li>Item-Level Targeting</li><li>MSI Deployment</li><li>gpresult</li></ul>
-              <a class="text-link" href="projects/group-policy.html">View project <span aria-hidden="true">→</span></a>
-            </article>
-
-            <article class="project-card">
-              <div class="card-icon" aria-hidden="true">FS</div>
-              <p class="card-kicker">File and Storage</p>
-              <h3>Enterprise Windows File Services</h3>
-              <p>Implemented FSRM, quotas, Shadow Copies, Previous Versions, NTFS permissions, folder redirection, and ABE.</p>
-              <ul class="tag-list"><li>FSRM</li><li>NTFS</li><li>Shadow Copies</li><li>ABE</li></ul>
-              <a class="text-link" href="projects/file-services.html">View project <span aria-hidden="true">→</span></a>
-            </article>
-
-            <article class="project-card placeholder-card">
-              <div class="card-icon" aria-hidden="true">+</div>
-              <p class="card-kicker">Current Project</p>
-              <h3>UniFi Business-Style Network</h3>
-              <p>Documenting VLAN segmentation, managed switching, wireless deployment, secure guest networking, and firewall policy.</p>
-              <ul class="tag-list"><li>UniFi</li><li>VLANs</li><li>Wireless</li><li>Firewall Rules</li></ul>
-              <a class="text-link" href="projects/unifi-network.html">View project <span aria-hidden="true">→</span></a>
-            </article>
-          </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-label">Capabilities</p>
-            <h2>Technical Skills</h2>
-          </div>
-          <p></p>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-group">
-            <h3>Systems Administration</h3>
-            <ul>
-              <li>Windows Server</li>
-              <li>Active Directory Domain Services</li>
-              <li>Group Policy Management</li>
-              <li>DNS and DHCP fundamentals</li>
-              <li>File Shares</li>
-            </ul>
-          </article>
-
-          <article class="skill-group">
-            <h3>Networking</h3>
-            <ul>
-              <li>TCP/IP and subnetting</li>
-              <li>VLANs and network segmentation</li>
-              <li>Wireless networking</li>
-              <li>Switching and routing fundamentals</li>
-              <li>UniFi administration</li>
-            </ul>
-          </article>
-
-          <article class="skill-group">
-            <h3>Support and Endpoint</h3>
-            <ul>
-              <li>Windows 10 and Windows 11</li>
-              <li>Hardware and software troubleshooting</li>
-              <li>VoIP Phones</li>
-              <li>User account administration</li>
-              <li>Printers, peripherals, and conferencing</li>
-            </ul>
-          </article>
-
-          <article class="skill-group">
-            <h3>Tools and Platforms</h3>
-            <ul>
-              <li>Proxmox VE</li>
-              <li>Ative Directory</li>
-              <li>Microsoft Entra ID - learning</li>
-              <li>GitHub</li>
-              <li>Cloudflare DNS</li>
-              <li>PowerShell — learning</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="certifications" class="section section-dark">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-label">Credentials</p>
-            <h2>Certifications</h2>
-          </div>
-          <p></p>
-        </div>
-
-        <div class="credential-grid">
-            <article class="credential-card">
-            <p class="credential-status">In Progress</p>
-            <h3>CompTIA Security+</h3>
-            <p></p>
-          </article>
-
-           <article class="credential-card">
-             <img
-                src="assets/images/CIOS_Certified.png"
-                alt="CompTIA A+ Certification"
-                class="cert-badge">
-            <p class="credential-status">Earned</p>
-            <h3>CompTIA IT Operations Specialist</h3>
-            <p>Stackable certification earned through A+ and Network+</p>
-          </article>
-
-          <article class="credential-card">
-             <img
-                src="assets/images/Network+-png.png"
-                alt="CompTIA A+ Certification"
-                class="cert-badge">
-            <p class="credential-status">Earned</p>
-            <h3>CompTIA Network+</h3>
-            <p>Networking concepts, operations, security, and troubleshooting</p>
-          </article>
-
-         <article class="credential-card">
-            <img
-                src="assets/images/A+-png.png"
-                alt="CompTIA A+ Certification"
-                class="cert-badge">
-
-        
-            <p class="credential-status">Earned</p>
-            <h3>CompTIA A+</h3>
-            <p>Core 1 and Core 2</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="resume" class="section">
-      <div class="container resume-panel">
-        <div>
-          <p class="section-label">Résumé</p>
-          <h2>Experience</h2>
-          <p>
-          </p>
-        </div>
-
-        <div class="button-group">
-          <a
-            class="button button-primary"
-            href="assets/documents/Timothy-Bowen-Resume.pdf"
-            target="_blank"
-            rel="noopener"
-          >
+</div>
+<div class="button-group">
+<a class="button button-primary" href="assets/documents/Timothy-Bowen-Resume.pdf" rel="noopener" target="_blank">
             Open Résumé
           </a>
-          <a
-            class="button button-secondary"
-            href="assets/documents/Timothy-Bowen-Resume.pdf"
-            download
-          >
+<a class="button button-secondary" download="" href="assets/documents/Timothy-Bowen-Resume.pdf">
             Download PDF
           </a>
-        </div>
-      </div>
-    </section>
+</div>
+</div>
+</section>
+<section class="section section-muted" id="contact">
+<div class="container contact-panel">
+<div>
+<p class="section-label">Contact</p>
+<h2>Let's connect.</h2>
 
-    <section id="contact" class="section section-muted">
-      <div class="container contact-panel">
-        <div>
-          <p class="section-label">Contact</p>
-          <h2>Let's connect.</h2>
-          <p>
-            
-          </p>
-        </div>
-
-        <div class="contact-links">
-          <a href="mailto:timseasyit@gmail.com">timseasyit@gmail.com</a>
-          <a href="https://www.linkedin.com/in/timothy-bowen-it/" target="_blank" rel="noopener">
+</div>
+<div class="contact-links">
+<a href="mailto:timseasyit@gmail.com">timseasyit@gmail.com</a>
+<a href="https://www.linkedin.com/in/timothy-bowen-it/" rel="noopener" target="_blank">
             LinkedIn
           </a>
-          <a href="https://github.com/timseasyit" target="_blank" rel="noopener">
+<a href="https://github.com/timseasyit" rel="noopener" target="_blank">
             GitHub
           </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>© <span id="current-year"></span> Timothy Bowen</p>
-      <p>Hosted with GitHub Pages • DNS managed through Cloudflare</p>
-    </div>
-  </footer>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-content">
+<p>© <span id="current-year"></span> Timothy Bowen</p>
+<p>Hosted with GitHub Pages • DNS managed through Cloudflare</p>
+</div>
+</footer>
 </body>
 </html>
