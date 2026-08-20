@@ -3,31 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Technical project by Timothy Bowen.">
+  <meta name="description" content="Business-style UniFi network project by Timothy Bowen featuring VLAN segmentation, managed switching, wireless networking, firewall testing, and infrastructure documentation.">
   <title>UniFi Business-Style Network | Timothy Bowen</title>
-
-  
   <link rel="stylesheet" href="../css/styles.css">
   <script src="../js/main.js" defer></script>
 </head>
-
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
   <header class="site-header">
     <div class="container nav-container">
       <a class="site-logo" href="../index.html">Timothy Bowen</a>
-
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="primary-navigation"
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span aria-hidden="true">☰</span>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span><span aria-hidden="true">☰</span>
       </button>
-
       <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
         <a href="../index.html#about">About</a>
         <a href="../index.html#projects">Projects</a>
@@ -47,12 +35,9 @@
           <a href="../index.html#projects">Projects</a> /
           <span>UniFi Business-Style Network</span>
         </nav>
-
         <p class="section-label">Networking</p>
         <h1>UniFi Business-Style Network</h1>
-        <p class="project-intro">
-          Designing and deploying a business-style UniFi network focused on security, performance, and enterprise network management.
-        </p>
+        <p class="project-intro">Designed and deployed a segmented UniFi environment focused on managed switching, wireless networking, guest access, firewall policy, centralized management, and hands-on troubleshooting.</p>
       </div>
     </section>
 
@@ -61,140 +46,70 @@
         <article class="project-content">
           <section>
             <h2>Overview</h2>
-            <p>
-              This project focuses on designing and implementing a business-style network using the UniFi platform. 
-              The goal is to gain hands-on experience with enterprise networking concepts including VLAN segmentation, 
-              managed switching, wireless deployment, firewall configuration, and network documentation.
-            </p>
-          </section>
-
-         <section>
-
-              <h2>Architecture or Environment</h2>
-          
-              <figure class="project-figure">
-          
-                  <img
-                      src="../assets/images/Topology.png"
-                      alt="Active Directory lab architecture"
-                      class="project-image">
-          
-                  <figcaption>
-                      A network Topology of my UniFi Network.
-                  </figcaption>
-          
-              </figure>
-          
+            <p>This project uses the UniFi platform to practice enterprise networking concepts in a controlled home-lab environment. The network includes a Cloud Gateway Max, Switch Pro Max, and multiple U7 Lite access points. The lab is used to test segmentation, wireless deployment, firewall behavior, device management, and infrastructure changes.</p>
           </section>
 
           <section>
-            <h2>Objectives</h2>
-            <ul>
-              <li>Design an enterprise-style network topology</li>
-              <li>Configure multiple VLANs</li>
-              <li>Separate trusted and guest traffic</li>
-              <li>Deploy multiple wireless netowrks (SSIDs)</li>
-              <li>Configure firewall rules between VLANs</li>
-              <li>Implement enterprise wireless security</li>
-              <li>Document the conmplete network</li>
-              <li>Validate connectivity and performance</li>
-            </ul>
+            <h2>Architecture</h2>
+            <figure class="project-figure">
+              <img src="../assets/images/Topology.png" alt="Topology diagram of the UniFi home lab network" class="project-image">
+              <figcaption>Logical topology of the UniFi lab environment.</figcaption>
+            </figure>
           </section>
 
           <section>
             <h2>Implementation</h2>
-            <p>
-            </p>
-
             <ol>
               <li>Installed and adopted the UniFi Cloud Gateway Max.</li>
-              <li>Deployed the UniFi Switch Pro Max as the core managed switch.</li>
-              <li>Installed and configured UniFi U7 Lite wireless access points.</li>
-              <li>Updated firmware and adopted all devices into the UniFi Network Controller.</li>
-              <li>Configured the primary LAN and verified wired and wireless connectivity.</li>
-              <li>Planned the network topology, VLAN structure, and wireless deployment for future implementation.</li>
-              <li>Began documenting the network infrastructure and device inventory.</li>
+              <li>Deployed the UniFi Switch Pro Max as the managed core switch.</li>
+              <li>Installed and configured two UniFi U7 Lite wireless access points.</li>
+              <li>Migrated the primary LAN from the 192.168.1.0/24 range to 192.168.0.0/24.</li>
+              <li>Created separate Corporate, Guest, and IoT network/SSID roles for segmentation testing.</li>
+              <li>Assigned a Corporate network/VLAN to a managed switch port and validated endpoint connectivity.</li>
+              <li>Configured and tested firewall and isolation behavior between network segments.</li>
+              <li>Documented topology, device inventory, addressing changes, and troubleshooting results.</li>
             </ol>
           </section>
 
           <section>
             <h2>Challenges and Troubleshooting</h2>
-            <p>
-              As this project progresses, each phase is documented, tested, 
-              and validated before moving to the next stage. 
-              This includes verifying VLAN connectivity, wireless performance, 
-              firewall policies, and network segmentation.
-            </p>
+            <p>One of the most useful parts of the project was troubleshooting firewall-rule behavior. During testing, a broad rule blocked external connectivity, including traffic to a known public IP. I reviewed rule scope and ordering, corrected the policy, and retested connectivity. The exercise reinforced how rule order and source/destination scope affect network behavior.</p>
+            <p>The LAN migration also required updating infrastructure addresses and validating DNS, gateway, and server connectivity after the change.</p>
           </section>
 
           <section>
             <h2>Results</h2>
             <ul>
-              <li>All UniFi devices successfully deployed and operational</li>
-              <li>Stable wired and wireless connectivity established</li>
-              <li>Centralized management through the UniFi Controller</li>
-              <li>Foundation prepared for VLANs, guest networking, and firewall rules</li>
-              <li>Project documentation in progress</li>
+              <li>Centralized UniFi management for gateway, switch, and wireless infrastructure.</li>
+              <li>Established separate network roles for trusted, guest, and IoT devices.</li>
+              <li>Validated managed switch-port assignment and segmented connectivity.</li>
+              <li>Practiced firewall policy design, rule-order troubleshooting, and isolation testing.</li>
+              <li>Maintained documentation as the network architecture evolved.</li>
             </ul>
           </section>
 
           <section>
             <h2>Lessons Learned</h2>
-            <p>
-              This project has reinforced the importance of planning a network before deployment. 
-              Designing VLANs, IP addressing, and firewall policies in advance helps create a 
-              scalable and secure infrastructure. I have also gained hands-on experience with 
-              the UniFi platform, including device adoption, centralized management, 
-              firmware management, and documenting network changes throughout the implementation process.
-            </p>
+            <p>This project reinforced the value of planning addressing, VLANs, SSIDs, and firewall policy before implementation. It also demonstrated the importance of validating changes one layer at a time so that routing, DNS, switching, wireless, and firewall problems can be isolated efficiently.</p>
           </section>
 
           <section>
-
-              <h2>Additional Screenshots</h2>
-          
-              <figure class="project-figure">
-          
-                  <img
-                      src="../assets/images/UniFi.png"
-                      alt="Active Directory lab architecture"
-                      class="project-image">
-          
-                  <figcaption>
-                      UniFi Network Dashboard.
-                  </figcaption>
-          
-              </figure>
-          
+            <h2>UniFi Dashboard</h2>
+            <figure class="project-figure">
+              <img src="../assets/images/UniFi.png" alt="UniFi Network dashboard from the home lab" class="project-image">
+              <figcaption>UniFi Network dashboard used for centralized monitoring and configuration.</figcaption>
+            </figure>
           </section>
         </article>
 
         <aside class="project-sidebar">
           <h2>Project Details</h2>
-
           <dl>
-            <dt>Status</dt>
-            <dd>In Progress</dd>
-
-            <dt>Environment</dt>
-            <dd>Home Lab</dd>
-
-            <dt>Technologies</dt>
-            <dd>UniFi Network, UniFi Cloud Gateway Max, UniFi Switch Pro Max, UniFi U7 Lite Access Points, 
-            VLANs, DHCP, DNS, TCP/IP, Enterprise Wireless (Wi-Fi), Firewall Rules, WPA2/WPA3 Security, 
-            Network Documentation</dd>
-
-            <dt>Skills Demonstrated</dt>
-            <dd>Network Design, Network Installation and Deployment, Device Configuration, Enterprise Wireless Administration, 
-              VLAN Planning, Network Troubleshooting, Infrastructure Documentation, Firmware Management, 
-              Network Security Fundamentals, Problem Solving</dd>
-
-            <dt>Repository</dt>
-            <dd>
-              <a href="https://github.com/timseasyit" target="_blank" rel="noopener">
-                View on GitHub
-              </a>
-            </dd>
+            <dt>Status</dt><dd>Operational / Ongoing Lab</dd>
+            <dt>Environment</dt><dd>Enterprise-style home lab</dd>
+            <dt>Technologies</dt><dd>UniFi Cloud Gateway Max, Switch Pro Max, U7 Lite access points, VLANs, DHCP, DNS, TCP/IP, Wi-Fi, firewall rules, guest networking</dd>
+            <dt>Skills Demonstrated</dt><dd>Network design, managed switching, VLAN segmentation, wireless administration, firewall troubleshooting, IP migration, infrastructure documentation</dd>
+            <dt>Repository</dt><dd><a href="https://github.com/timseasyit" target="_blank" rel="noopener">View on GitHub</a></dd>
           </dl>
         </aside>
       </div>
